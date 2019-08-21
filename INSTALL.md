@@ -1,9 +1,10 @@
 # Compiling Command Line of KMC2D on CUDA-capable GPU Linux sever
 
-After downloading the source code of KMC1D, you need to ensure that you 1)have a CUDA-Capable GPU Environment; 2) install NVIDIA and CUDA related Toolkit or Packages; and 3) Compile the Source Code into executable binary command.
+After downloading the source code of KMC1D, you need to ensure that you 1) have a CUDA-Capable GPU Environment; 2) install NVIDIA and CUDA related Toolkit or Packages; and 3) Compile the Source Code into executable binary command.
 
 ## CUDA-capable GPU sever Environment
-**CUDA** is a **parallel** computing platform and programming model invented by **NVIDIA**. Essentially, **NVIDIA** is committed to supporting **CUDA** as hardware changes. Hardware is projected to change radically in the future. However, program algorithm, architecture and source code can remain largely unchanged. To use **CUDA** on your system, you need a **CUDA-capable GPU** sever, supported version of **Linux** with a **gcc** compiler and **nvcc** compiler, and **NVIDIA CUDA** related Toolkit. The details for **CUDA** installation guide can be found at [**here**](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions) . Briefly, the main command lines for **CUDA** Installation are the followings:
+**CUDA** is a **parallel** computing platform and programming model invented by **NVIDIA**. Essentially, **NVIDIA** is committed to supporting **CUDA** as hardware changes. Hardware is projected to change radically in the future. However, program algorithm, architecture and source code can remain largely unchanged. To use **CUDA** on your system, you need a **CUDA-capable GPU** sever, supported version of **Linux** with a **gcc** compiler and **nvcc** compiler, and **NVIDIA CUDA** related Toolkit. The details for **CUDA** installation guide can be found at [**here**](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions) . Briefly, the main command lines for **CUDA** Installation are as the followings:
+
 ### Verify CUDA-Capable GPU in your Linux sever
 ``` 
 lspci | grep -i nvidia 
@@ -46,7 +47,7 @@ export PATH
 export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
-## Compile the CUDA Source Code -KMC2D.cu
+## Compile the CUDA Source Code - KMC2D.cu
 After download the KMC2D source code from [**here**](http://bioinfo.noble.org/KMC2D/Download.gy)
 Use the following command lines to compile 
 ```
